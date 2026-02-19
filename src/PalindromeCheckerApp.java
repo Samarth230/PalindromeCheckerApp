@@ -9,5 +9,16 @@ public class PalindromeCheckerApp {
         System.out.println("Welcome to Palindrome Checker Management System");
         System.out.println("Version 1.0");
         System.out.println("System initialised Successfully");
+
+        /* Use Case 2: Hard Coded Palindrome Validation System
+         */
+
+        for(i=0;i<input.length()/2;i++){
+            
+        }
     }
 }
+
+
+
+
