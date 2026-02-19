@@ -28,8 +28,20 @@ public class PalindromeCheckerApp {
 
 
     /*Use Case 3: Check whether a string is a palindrome by reversing it.     */
-    }
 
+    String input1 = "madam";
+    String reverse = "";
+    input1 = input1.toLowerCase();
+    for(int i= input1.length()-1;i>=0;i--){
+        reverse = reverse+ input1.charAt(i);
+    }
+    if(reverse.equals(input1)){
+        System.out.println("It is a palindrome");}
+    else{
+        System.out.println("It is not a palindrome");
+        }
+
+    }
 }
 
 
