@@ -3,46 +3,30 @@
     This class represents the entry point of the Palindrome Checker Management System
     */
 
+import java.sql.Array;
+
 public class PalindromeCheckerApp {
     public static void main(String[] args){
-        System.out.println("Welcome to Palindrome Checker Management System");
-        System.out.println("Version 1.0");
-        System.out.println("System initialised Successfully");
+/* Use Case 4: Character Array*/
 
-        /* Use Case 2: Hard Coded Palindrome Validation System
-         */
-
-    String input = "madam";
-    boolean palindrome = true;
-    char Arr[]=input.toLowerCase().toCharArray();
-    for(int i=0;i<input.length()/2;i++){
-       if(input.charAt(i)!=input.charAt(input.length()-1-i)){
-           palindrome = false;
-           break;
-        }
+    String input2 = "radar";
+    char[] Arr= input2.toCharArray();
+    boolean isPalindrome = true;
+    int start = 0;
+    int end = Arr.length-1;
+    if(start<end){
+        if(Arr[start]!=Arr[end]){
+        isPalindrome=false;}
+        start++;
+        end--;
     }
-    if(palindrome)
-        System.out.println("The given String is a palindrome");
-    else
-        System.out.println("The given String is not a palindrome");
-
-
-    /*Use Case 3: Check whether a string is a palindrome by reversing it.     */
-
-    String input1 = "madam";
-    String reverse = "";
-    input1 = input1.toLowerCase();
-    for(int i= input1.length()-1;i>=0;i--){
-        reverse = reverse+ input1.charAt(i);
+    if(isPalindrome){
+        System.out.println("its a palindrome");
     }
-    if(reverse.equals(input1)){
-        System.out.println("It is a palindrome");}
-    else{
-        System.out.println("It is not a palindrome");
-        }
-
+    else {
+        System.out.println("Its not a palindrome");
     }
-}
+    }}
 
 
 
