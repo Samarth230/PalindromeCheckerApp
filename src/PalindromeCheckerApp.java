@@ -4,31 +4,35 @@
     */
 
 import java.sql.Array;
-import java.util.Stack;
+import java.util.*;
 
 public class PalindromeCheckerApp {
     public static void main(String[] args){
 /* Use Case 5: Stack Based*/
 
-    String input2 = "radar";
-    char[] arr = input2.toCharArray();
+    String input2 = "civic";
+    char[] Arr = input2.toCharArray();
+    Queue<Character> queue =  new LinkedList<>();
     Stack<Character> stack = new Stack<>();
-    for(char c: arr){
+    boolean isPalindrome = true;
+
+    for(char c: Arr){
         stack.push(c);
+        queue.add(c);
     }
-    boolean isPalindrome= true;
-    for(char c: arr){
-        if(c!= stack.pop()){
-            isPalindrome=false;
+    for(char c : Arr){
+        if(queue.remove()!=stack.pop()){
+            isPalindrome = false;
+            break;
         }
     }
     if(isPalindrome){
-        System.out.println("Its a Palindrome");
+        System.out.println("Its a palindrome");
     }
     else{
         System.out.println("Its not a palindrome");
-    }
-    }}
+    }}}
+
 
 
 
