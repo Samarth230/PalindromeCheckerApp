@@ -8,18 +8,18 @@ import java.util.*;
 
 public class PalindromeCheckerApp {
     public static void main(String[] args){
-/* Use Case 7: Deque based palindrome checker*/
+/* Use Case 8: Linked List based palindrome checker*/
 
-    String input2 = "refer";
+    String input2 = "level";
     char[] Arr = input2.toCharArray();
-    Deque<Character> dequeue =  new ArrayDeque<>();
+    LinkedList<Character> linkedlist =  new LinkedList<>();
     boolean isPalindrome = true;
 
     for(char c: Arr){
-        dequeue.addFirst(c);
+        linkedlist.addFirst(c);
     }
     for(char c : Arr){
-        if(c!= dequeue.removeLast()){
+        if(c!= linkedlist.removeLast()){
             isPalindrome = false;
             break;
         }
