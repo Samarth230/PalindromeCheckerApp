@@ -8,20 +8,18 @@ import java.util.*;
 
 public class PalindromeCheckerApp {
     public static void main(String[] args){
-/* Use Case 5: Stack Based*/
+/* Use Case 7: Deque based palindrome checker*/
 
-    String input2 = "civic";
+    String input2 = "refer";
     char[] Arr = input2.toCharArray();
-    Queue<Character> queue =  new LinkedList<>();
-    Stack<Character> stack = new Stack<>();
+    Deque<Character> dequeue =  new ArrayDeque<>();
     boolean isPalindrome = true;
 
     for(char c: Arr){
-        stack.push(c);
-        queue.add(c);
+        dequeue.addFirst(c);
     }
     for(char c : Arr){
-        if(queue.remove()!=stack.pop()){
+        if(c!= dequeue.removeLast()){
             isPalindrome = false;
             break;
         }
